@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+         <style>
+            body {
+                background-image: url("https://img.freepik.com/free-vector/clear-blue-sky-green-trees_1308-33406.jpg?w=1060&t=st=1694768906~exp=1694769506~hmac=a3865380996a72aa498d6e262bbdb301d1132c5d21311bfb9ebb1c9c9a00cda6");
+                background-size: cover;
+            }
+            .container {
+                margin-top: 150px;
+                text-align: center;
+            }
+            .login-box {
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            }
+            .login-header {
+                font-size: 28px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+            .form-label {
+            font-size: 18px;
+        }
+        .form-control {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .error-message {
+            color: #f30606;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .btn-login {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+        .signup-link {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+         </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-md-6 offset-md-3 login-box">
+                <h1 class="login-header">Welcome!........</h1>
+                <form method="post" action="/">
+                    <div class="mb-4">
+                     <label for="username" class="form-label" >Username</label>
+                     <input type="text" class="form-control" id="username" name="username" placeholder="Username"> <br>
+                     <span>{{.UsernameError}}</span>
+                     <p class="error-message"></p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="password" placeholder="password" name="password"> <br>
+                        <span>{{.PasswordError}}</span>
+                        <p class="error-message"></p>
+                    </div>
+                    <button type="submit" class="btn btn-login" name="Login">Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

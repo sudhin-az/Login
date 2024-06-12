@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-vector/colorful-parrot-wood-scene_1308-24557.jpg?t=st=1694976423~exp=1694977023~hmac=5bbbd42382e317556951ec7191e030896a2f78b383d6858ef430e4fe187bcefc");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh; 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; 
+            justify-content: flex-start; 
+            align-items: center;
+            height: 100%;
+        }
+
+        .welcome-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px; 
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-right: auto; 
+        }
+
+        .welcome-header {
+            font-size: 36px; 
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .username {
+            font-size: 32px; 
+            color: #007bff; 
+        }
+
+        .logout-link {
+            font-size: 26px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff; 
+        }
+
+        .logout-link:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-box">
+            <h1>Welcome to my Home Page</h1>
+            <form method="get" action="/logout">
+                <span>{{.Username2}}</span>
+                <button type="submit">Logout</button>
+            </form>
+
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>
